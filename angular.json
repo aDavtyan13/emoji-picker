@@ -62,7 +62,8 @@
               "projects/demo/src/assets"
             ],
             "styles": [
-              "projects/demo/src/styles.scss"
+              "projects/demo/src/styles.scss",
+              "projects/emoji-picker/src/lib/assets/sass/emoji-picker.scss"
             ],
             "scripts": []
           },

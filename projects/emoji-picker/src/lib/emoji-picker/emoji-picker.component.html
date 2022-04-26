@@ -1,0 +1,29 @@
+<div class="emoji-picker" outClick (outClickEvent)="closeEmojiPicker()">
+  <button type="button" class="emoji-picker--icon--btn"
+          (click)="toggleEmojiPicker()">
+    <span class="{{btnIcon}} emoji-picker--icon"></span>
+  </button>
+  <div *ngIf="showEmojiPicker" class="emoji-picker--block">
+    <div class="emoji-picker--categories">
+      <div class="emoji-picker--category"
+           *ngFor="let category of data?.categories; let i = index;"
+           (click)="chooseCategory(i)"
+           [ngClass]="{'selected': category?.selected}"
+           [ngStyle]="{'width': calcEmojiSize(data.categories.length)}">
+        <div>{{category?.emoji}}</div>
+      </div>
+    </div>
+    <div class="emoji-picker--search">
+      <input type="text" placeholder="Search" [(ngModel)]="searchValue" (input)="searchElement()" autofocus>
+      <span class="{{searchIcon}} emoji-picker--icon"></span>
+    </div>
+    <div class="emoji-picker--emojis">
+      <div class="emoji-picker--emoji"
+           *ngFor="let emoji of selectedEmojis"
+           (click)="selectEmoji(emoji.emoji)"
+           [ngStyle]="{'width': calcEmojiSize(emojisPerRow)}">
+        <div title="{{emoji?.name}}">{{emoji?.emoji}}</div>
+      </div>
+    </div>
+  </div>
+</div>
