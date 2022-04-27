@@ -9,7 +9,7 @@ export class OutClickDirective {
 
   @HostListener('document:click', ['$event'])
   toggleOpen(event: any) {
-    if ((!this.elRef.nativeElement.contains(event.target)) && !(event.target.className?.includes('emoji-picker--block'))) {
+    if ((!this.elRef.nativeElement.contains(event.target)) && !(event.target.className.includes('emoji-picker--block'))) {
       this.outClickEvent.emit();
     }
   }

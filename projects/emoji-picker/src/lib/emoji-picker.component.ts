@@ -1,5 +1,5 @@
 import {Subscription} from 'rxjs';
-import {ICategory, IDataInterface, IEmoji} from '../@core/interfaces/data.interface';
+import {ICategory, IDataInterface, IEmoji} from './@core/interfaces/data.interface';
 import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 
 import {EmojiPickerService} from './emoji-picker.service';

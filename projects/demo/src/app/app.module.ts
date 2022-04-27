@@ -3,7 +3,7 @@ import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
-import {EmojiPickerModule} from '../../../emoji-picker/src/lib/emoji-picker/emoji-picker.module';
+import {EmojiPickerModule} from '../../../emoji-picker/src/lib/emoji-picker.module';
 
 @NgModule({
   declarations: [
