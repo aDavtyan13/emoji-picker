@@ -1,5 +1,5 @@
 {
-  "name": "@adavtyan13/emoji-picker",
+  "name": "ng-emoji-picker-unicode",
   "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^13.3.0",
