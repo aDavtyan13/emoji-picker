@@ -1,0 +1,36 @@
+{
+  "name": "emoji-picker",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^13.3.0",
+    "@angular/core": "^13.3.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "description": "emoji picker plugin",
+  "author": {
+    "name": "Alla Davtyan",
+    "email": "alla.davtyan99@gmail.com"
+  },
+  "module": "fesm2015/emoji-picker.mjs",
+  "es2020": "fesm2020/emoji-picker.mjs",
+  "esm2020": "esm2020/emoji-picker.mjs",
+  "fesm2020": "fesm2020/emoji-picker.mjs",
+  "fesm2015": "fesm2015/emoji-picker.mjs",
+  "typings": "emoji-picker.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./emoji-picker.d.ts",
+      "esm2020": "./esm2020/emoji-picker.mjs",
+      "es2020": "./fesm2020/emoji-picker.mjs",
+      "es2015": "./fesm2015/emoji-picker.mjs",
+      "node": "./fesm2015/emoji-picker.mjs",
+      "default": "./fesm2020/emoji-picker.mjs"
+    }
+  },
+  "sideEffects": false
+}

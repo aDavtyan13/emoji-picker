@@ -1,0 +1,32 @@
+import { IDataInterface, IEmoji } from '../@core/interfaces/data.interface';
+import { EventEmitter, OnDestroy, OnInit } from '@angular/core';
+import { EmojiPickerService } from './emoji-picker.service';
+import * as i0 from "@angular/core";
+export declare class EmojiPickerComponent implements OnInit, OnDestroy {
+    private emojiPickerService;
+    btnIcon: string;
+    searchIcon?: string;
+    customClass: string;
+    emojisPerRow: number;
+    selectEmojiEvent: EventEmitter<string>;
+    constructor(emojiPickerService: EmojiPickerService);
+    ngOnInit(): void;
+    ngOnDestroy(): void;
+    private subscription;
+    private searchTimer;
+    data: IDataInterface;
+    selectedEmojis: IEmoji[];
+    searchValue: string;
+    showEmojiPicker: boolean;
+    private getEmojis;
+    private unselectAllCategories;
+    private showSelectedEmojis;
+    calcEmojiSize(count: number): string;
+    chooseCategory(index: number): void;
+    selectEmoji(emoji: string): void;
+    toggleEmojiPicker(): void;
+    searchElement(): void;
+    closeEmojiPicker(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<EmojiPickerComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<EmojiPickerComponent, "lib-emoji-picker", never, { "btnIcon": "btnIcon"; "searchIcon": "searchIcon"; "customClass": "customClass"; "emojisPerRow": "emojisPerRow"; }, { "selectEmojiEvent": "selectEmojiEvent"; }, never, never>;
+}
