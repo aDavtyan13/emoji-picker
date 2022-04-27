@@ -59,7 +59,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/demo/src/favicon.ico",
-              "projects/demo/src/assets"
+              "projects/demo/src/assets/",
+              {
+                "glob": "**/*",
+                "input": "./projects/emoji-picker/src/lib/assets/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
               "projects/demo/src/styles.scss",

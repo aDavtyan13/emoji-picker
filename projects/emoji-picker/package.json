@@ -7,5 +7,10 @@
   },
   "dependencies": {
     "tslib": "^2.3.0"
+  },
+  "description": "emoji picker plugin",
+  "author": {
+    "name": "Alla Davtyan",
+    "email": "alla.davtyan99@gmail.com"
   }
 }

@@ -1,7 +1,12 @@
 <div class="emoji-picker" outClick (outClickEvent)="closeEmojiPicker()">
   <button type="button" class="emoji-picker--icon--btn"
           (click)="toggleEmojiPicker()">
-    <span class="{{btnIcon}} emoji-picker--icon"></span>
+    <ng-container *ngIf="btnIcon; else btnIconImg">
+      <span class="{{btnIcon}} emoji-picker--icon"></span>
+    </ng-container>
+    <ng-template #btnIconImg>
+      <img src="../assets/images/emoji.svg" alt="" class="emoji-picker--icon--img">
+    </ng-template>
   </button>
   <div *ngIf="showEmojiPicker" class="emoji-picker--block">
     <div class="emoji-picker--categories">
@@ -15,7 +20,12 @@
     </div>
     <div class="emoji-picker--search">
       <input type="text" placeholder="Search" [(ngModel)]="searchValue" (input)="searchElement()" autofocus>
-      <span class="{{searchIcon}} emoji-picker--icon"></span>
+      <ng-container *ngIf="searchIcon; else searchIconImg">
+        <span class="{{searchIcon}} emoji-picker--icon"></span>
+      </ng-container>
+      <ng-template #searchIconImg>
+        <img src="../assets/images/search.svg" class="emoji-picker--icon--img" alt="">
+      </ng-template>
     </div>
     <div class="emoji-picker--emojis">
       <div class="emoji-picker--emoji"

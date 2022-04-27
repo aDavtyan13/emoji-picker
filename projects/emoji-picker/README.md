@@ -2,23 +2,44 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
-## Code scaffolding
+This library will help you to use Unicode emojis. There are 8 categories with 1525 emojis.
 
-Run `ng generate component component-name --project emoji-picker` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project emoji-picker`.
-> Note: Don't forget to add `--project emoji-picker` or else it will be added to the default project in your `angular.json` file. 
+### Attributes
+Attributes   | Description
+-------------|--------------
+@Input() <br> **customClass**: string | You can add custom class to customize plugin
+@Input() <br> **btnIcon**: string | You can add custom icon to button, from where emoji picker will open <br> default icon - <img src="https://freesvg.org/img/1456705995.png" height="20px" width="20px">
+@Input() <br> **searchIcon**: string | You can add custom search icon to search input <br> default icon - <img src="https://icons.veryicon.com/png/o/miscellaneous/easemob-icon/search-934.png" height="20px" width="20px"> 
+@Input() <br> **emojisPerRow**: string | You can add number to indicate how many emojis will be in one row <br> defatuls is 9
+@Output() <br> **selectEmojiEvent**: EventEmitter< string >() | Event will be fired when emoji selected
 
-## Build
+### Example and Sample Code
+1) **Import _'EmojiPickerModule'_ in your app module**
+```ts
+import { EmojiPickerModule } from "emoji-picker";
+  
+@NgModule({
+  imports:[
+    ..
+    EmojiPickerModule
+    ..
+  ]
+})
+``` 
 
-Run `ng build emoji-picker` to build the project. The build artifacts will be stored in the `dist/` directory.
+2) **Add _'emoji-picker'_ in your component html**
+```html
+<lib-emoji-picker   [data]="emojiData"
+                    [customClass]="'customClass'"
+                    [emojisPerRow]="7"
+                    [btnIcon]="'fas fa-smile'"
+                    [searchIcon]="'fas fa-search'"
+                    (selectEmojiEvent)="selectEmoji($event)"></lib-emoji-picker>
+```
 
-## Publishing
-
-After building your library with `ng build emoji-picker`, go to the dist folder `cd dist/emoji-picker` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test emoji-picker` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3) **Add a method in your component class to listen for **selectEmojiEvent** event**
+```ts
+selectEmoji(emoji: string): void {
+  console.log(emoji);
+}
+```
