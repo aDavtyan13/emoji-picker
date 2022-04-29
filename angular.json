@@ -62,13 +62,13 @@
               "projects/demo/src/assets/",
               {
                 "glob": "**/*",
-                "input": "./projects/emoji-picker/src/lib/assets/",
+                "input": "./projects/emoji-picker/src/assets/",
                 "output": "/assets/"
               }
             ],
             "styles": [
               "projects/demo/src/styles.scss",
-              "projects/emoji-picker/src/lib/assets/sass/emoji-picker.scss"
+              "projects/emoji-picker/src/assets/sass/emoji-picker.scss"
             ],
             "scripts": []
           },
